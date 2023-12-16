@@ -1,0 +1,35 @@
+bot:
+  token: 6433325520:AAF6lA-U_1hC4rbZ7-48L7HObnouExLVoV8
+  OPEN_AI_TOKEN: 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
+server:
+  port: 8086
+spring:
+  thymeleaf:
+    check-template-location: false
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: rentmanagement.teenagers@gmail.com
+    password: esbhggiatjdqhhzx
+    properties:
+      mjaail:
+        smtp:
+          auth: true
+      mail:
+        smtp:
+          starttls:
+            enable: true
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: 1402
+    url: jdbc:postgresql://localhost:5432/telegram_gpt
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+
