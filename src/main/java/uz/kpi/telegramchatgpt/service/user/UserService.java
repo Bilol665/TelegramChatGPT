@@ -20,7 +20,6 @@ public class UserService {
     public UserEntity getByChatId(Long chatId) {
         return userRepository.findUserEntityByChatId(chatId).orElseThrow(() -> new DataNotFoundException("User not found!"));
     }
-
     public UserEntity addUser(Chat chat, Contact contact) {
         if (checkIfNumberExists(contact.getPhoneNumber())) return null;
         UserEntity user = UserEntity.builder()
