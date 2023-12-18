@@ -17,7 +17,6 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class UserService {
     private final UserRepository userRepository;
-
     public UserEntity getByChatId(Long chatId) {
         return userRepository.findUserEntityByChatId(chatId).orElseThrow(() -> new DataNotFoundException("User not found!"));
     }
