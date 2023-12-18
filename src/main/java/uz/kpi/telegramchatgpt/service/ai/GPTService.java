@@ -35,12 +35,17 @@ public class GPTService {
         List<MessageEntity> messages = currentChat.getMessages();
         List<MessageRequestDto> messageRequestDto = new ArrayList<>();
         for (MessageEntity message : messages) {
+//            if(message.getContent().equals(text)) {
+//                messageRequestDto.add(new MessageRequestDto(message.getRole(),message.getContent()
+//                        + "(answer me in " + user.getLanguage().name().toLowerCase() + ")"));
+//            }
             messageRequestDto.add(new MessageRequestDto(message.getRole(), message.getContent()));
         }
         boolean isTextPresent = false;
         for (MessageEntity message : messages) {
             if (message.getContent().equals(text)) {
                 isTextPresent = true;
+                break;
             }
         }
         if(!isTextPresent) {

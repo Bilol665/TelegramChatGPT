@@ -21,6 +21,8 @@ public class UserEntity extends BaseEntity {
     private String username;
     private String bio;
     @Enumerated(EnumType.STRING)
+    private UserRole role;
+    @Enumerated(EnumType.STRING)
     private LanguageEnum language;
     @Enumerated(EnumType.STRING)
     private UserState state;

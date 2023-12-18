@@ -37,6 +37,12 @@ public class MessageService {
     }
 
     public void registerNewChat(UserEntity currentUser) {
+        Optional<GPTChat> gptChatByUser = chatRepository.findGPTChatByUser(currentUser);
+        if(gptChatByUser.isPresent()) {
+            GPTChat chat = gptChatByUser.get();
+            chat.setStatus(ChatStatus.DEPRECATED);
+            chatRepository.save(chat);
+        }
         GPTChat chat = new GPTChat(currentUser,null, ChatStatus.ACTIVE);
         chatRepository.save(chat);
     }

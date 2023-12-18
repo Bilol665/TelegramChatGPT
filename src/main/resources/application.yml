@@ -1,5 +1,6 @@
 bot:
-  token: 6433325520:AAF6lA-U_1hC4rbZ7-48L7HObnouExLVoV8
+#  token: 6433325520:AAF6lA-U_1hC4rbZ7-48L7HObnouExLVoV8
+  token: 6816774355:AAFfz7qoYsLgT9UgccxIMg3HIqKrwlPnkns
   OPEN_AI_TOKEN: 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
 server:
   port: 8086
